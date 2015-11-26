@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="large-12 columns">
+    <form>
+      <fieldset>
+        <legend>Outstanding Report</legend>
+
+        <table  id="outstanding_report" class="display" cellspacing="0">
+          <thead>
+            <tr>
+              <th width="100">Matter No</th>
+              <th>Barrister</th>
+              <th width="150">Matter Name</th>
+              <th width="80">User</th>
+              <th width="150">Last Updated</th>
+              <th width="100">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @audits.present? %>
+              <% @audits.each do |audit| %>
+                <tr>
+                  <td><%= audit.matter_no %></td>
+                  <td><%= audit.barrister_name %></td>
+                  <td><%= audit.matter_name %></td>
+                  <td><%= audit.user_type %></td>
+                  <td><%= audit.updated_at.strftime('%d/%m/%Y') %></td>
+                  <td class='right'><%= audit.amount %></td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+
+      </fieldset>
+    </form>
+  </div>
+</div>

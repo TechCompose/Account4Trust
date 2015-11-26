@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  matter_no: MyString
+  barrister_name: MyString
+  matter_name: MyString
+  user_type: MyString
+  amount: 1
+
+two:
+  matter_no: MyString
+  barrister_name: MyString
+  matter_name: MyString
+  user_type: MyString
+  amount: 1
